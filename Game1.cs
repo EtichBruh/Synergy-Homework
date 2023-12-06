@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Synergy_HW.Lesson;
 
 namespace Synergy_HW
 {
@@ -10,7 +11,7 @@ namespace Synergy_HW
         private SpriteBatch _spriteBatch;
         public static Texture2D SpriteSheet;
         public static SpriteFont Font;
-        
+
 
         public Game1()
         {
@@ -50,6 +51,9 @@ namespace Synergy_HW
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.DarkGray);
+
+            foreach (var lesson in Schedule.Lessons.Values)
+                _spriteBatch.DrawString(Font, lesson.Name, new(0, lesson.Cabinet - 700), Color.Black);
 
             // TODO: Add your drawing code here
 
