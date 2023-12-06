@@ -4,7 +4,6 @@
     {
         public string Name;
         public int Cabinet;
-        public string HomeWork;
-        
+        public string Homework;
     }
 }

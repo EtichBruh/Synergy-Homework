@@ -6,6 +6,8 @@ namespace Synergy_HW.UI
     {
         Tab[] Tabs;
         Button[] Buttons;
+        Button Create;
+        Button Read;
 
         public UIManager()
         {
